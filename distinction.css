@@ -7,7 +7,7 @@
 */
 :root{
 	--background: url("https://i.pinimg.com/originals/ef/7f/b1/ef7fb1b37078b6a2aef8e40710446bfa.jpg");
-	--background-move-vertical: 50%;
+	--background-move-vertical: 0%;
 
 	--default-border-radius: 15px;
 	--default-box-margins: 2px;
@@ -51,7 +51,7 @@
 .bg__12180{
 	background: var(--background) !important;
 	background-size: cover !important;
-	background-position-y: var(--background-move-vertical);
+	background-position-y: var(--background-move-vertical) !important;
 }
 
 /*transparent backgrounds*/
