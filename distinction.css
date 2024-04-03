@@ -1,0 +1,274 @@
+/**
+* @name Distinction
+* @author baecoom
+* @version 0.1
+* @description distinct boxes for all your distinct discord needs (very distinct)
+* @source https://github.com/Baeconboy/Distinction
+*/
+:root{
+	--background: url("https://i.pinimg.com/originals/ef/7f/b1/ef7fb1b37078b6a2aef8e40710446bfa.jpg");
+	--background-move-vertical: 50%;
+
+	--default-border-radius: 15px;
+	--default-box-margins: 2px;
+	--primary-box-color: rgba(0, 20, 30, 0.8);
+	--secondary-box-color: rgba(20, 20, 20, 0.2);
+
+	--primary-button-color: rgba(20, 20, 20, .6);
+	--secondary-button-color: rgba(70, 70, 70, 1);
+}
+
+@keyframes backBlur {
+	to {
+		backdrop-filter: blur(5px);
+	}
+}
+
+@keyframes typingAnim {
+	from {
+		opacity: 0%;
+	}
+	to {
+		opacity: 100%;
+	}
+}
+
+@keyframes fadeInDMs {
+	from {
+		left: 200px;
+	}
+	to {
+		left: 0px;
+	}
+}
+@keyframes slideBottom {
+	from {
+		height:0px;
+	}
+}
+
+ /*background image*/
+.bg__12180{
+	background: var(--background) !important;
+	background-size: cover !important;
+	background-position-y: var(--background-move-vertical);
+}
+
+/*transparent backgrounds*/
+.chat__52833,
+.chatContent_f087cb,
+.container__3673d,
+.container__7e23c,
+.container_bd15da,
+.container_debb33,
+.container_f79ab4,
+.inset__61d5b,
+.members__573eb,
+.panels__58331,
+.scroller__89969,
+.section__253ec,
+.selected__11b62,
+.selected__37292,
+.sidebar_e031be,
+.themed_b152d4,
+.themedBackground__3a4c0,
+.userPanelInnerThemed_c2aed9,
+.userProfileOuterUnthemed_e14365,
+.wrapper__216eb,
+.panel_bd8c76,
+.container_e1958d,
+.attachedBars_c1606a,
+.layer_f7d46a,
+.contentRegion__08eba,
+.contentRegionScroller__9ae20,
+.standardSidebarView__12528,
+.sidebarRegionScroller__8113e,
+.folder__17546,
+.container__694a1,
+.wrapper__4e6b6
+{
+	background: transparent !important;
+}
+
+/*make things invisible*/
+.form_d8a4a1:before,
+.children_cde9af:after,
+.content__01e65:before,
+.tabBody_a90ea8:before,
+.channel__0aef5:has(.link__3a950[href="/library"]),
+.channel__0aef5:has(.link__3a950[href="/store"]),
+.channel__0aef5:has(.link__3a950[href="/shop"]),
+.button__581d0[aria-label="Send a gift"]
+
+{
+	display:none;
+}
+
+/*Boxes*/
+.channelTextArea_c2094b,
+.container__26baa,
+.container__7e23c,
+.members__573eb,
+.messagesWrapper_add28b,
+.nowPlayingColumn_b025fe,
+.peopleColumn__0c784,
+.privateChannels__9b518,
+.profilePanel_e2cafe,
+.searchBarComponent__8f95f,
+.tree__7a511,
+.typingDots__0448d,
+.wrapper__57349,
+.panels__58331,
+.container_b92032,
+.side_b4b3f6,
+.contentColumn__5f80b
+{
+	backdrop-filter: blur(5px);
+    background-color: var(--primary-box-color) !important;
+	border-radius: var(--default-border-radius) !important;
+	margin: var(--default-box-margins) !important;
+}
+/*Special case box: Text box in chat*/
+.form_d8a4a1{
+	margin-top: 0px;
+	margin-bottom: calc(var(--default-box-margins) *2);
+	margin-right: calc(var(--default-box-margins)*2);
+	padding:0px;
+}
+
+/*Fix size of text box*/
+.channelTextArea_c2094b, .wrapper__57349{
+	width: 100%;
+	height:100%;
+	padding:0px;
+}
+
+/*Make little profile box on the bottom and the "follow channel" box the same height as text box for aesthetics*/
+.wrapper__57349{
+	height: 47px;
+}
+
+.container_debb33{
+	height: auto;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.button_ae40a4, .closeButton__8177f, .button_b82d53, .button_d4bf9b{
+	appearance: auto;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-radius:5px !important;
+	margin: 5px !important;
+	background: var(--primary-button-color) !important;
+	border-bottom: 5px solid var(--secondary-button-color) !important;
+	transition: border-bottom .2s !important;
+}
+.button_ae40a4:active, .closeButton__8177f:active, .button_ae40a4[aria-checked="true"], .button_b82d53:active, .button_d4bf9b:active{
+	border-bottom: 1px solid var(--secondary-button-color) !important;
+}
+
+/*make profile banner rounded*/
+.banner__6d414{
+	border-radius:var(--default-border-radius);
+}
+
+/*make server folders actually fit the server icons*/
+.expandedFolderBackground_b1385f{
+	width: 56px;
+	left: 8px;
+	background-color: var(--primary-button-color);
+}
+
+/*make members list take up entire sidebar*/
+.membersWrap__5ca6b{
+	height:100%;
+}
+
+/*make offline server members not transparent*/
+.offline__55fab{
+	opacity: 1;
+}
+
+/*server members are secondary box*/
+.member_b44d5d, .member_aa4760{
+	background: var(--secondary-box-color);
+	margin-bottom: var(--default-box-margins);
+}
+
+
+/*dms get the secondary box color*/
+.channel__0aef5, .wrapper__3c6d5{
+	transition: margin-left .4s !important;
+	margin-bottom: var(--default-box-margins);
+	background: var(--secondary-box-color);
+}
+
+/*selected dms get shifted to the side*/
+.channel__0aef5:has(.selected__37292){
+	margin-left:20px;
+}
+
+/*fixes for the "follow channel" box*/
+.wrapper__57349{
+	margin-left: var(--default-box-margins) !important;
+	margin-bottom:0px !important;
+	top:1px;
+}
+
+/*move typing animation up*/
+.typing__6fd1d{
+	bottom:55px;
+	animation-name: typingAnim;
+	animation-duration: 0.4s;
+}
+
+/*give typing animation a bit of padding on the right*/
+.typingDots__0448d{
+	padding-right:10px;
+}
+/*remove border of weird activity box*/
+.scroller__7c25e, .wrapper__3c6d5{
+	border:none;
+}
+
+.searchBar__621ec, .searchBar__310d8{
+	background: var(--secondary-box-color) !important;
+}
+
+.newMessagesBar__8b272{
+	width:100%;
+	left:0px;
+	border-radius: var(--default-border-radius);
+}
+
+.increasedActivityMainCard_e53744{
+	border-radius: var(--default-border-radius);
+	background-color: var(--secondary-box-color);
+	
+}
+
+.channel__0aef5{
+	animation-name: fadeInDMs;
+	animation-duration: .4s;
+}
+
+.header__71a82 {
+	margin-top:10px;
+}
+
+.backdrop__1a911{
+	animation-name: backBlur;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+}
+
+.sidebar_e031be{
+	min-width: ;
+}
+
+.wrapper__4e6b6{
+	height:auto;
+	box-shadow: none !important;
+}
