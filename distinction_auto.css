@@ -5,4 +5,32 @@
 * @source https://github.com/Baeconboy/Distinction
 */
 
-@import url("https://raw.githubusercontent.com/Baeconboy/Distinction/main/distinction.css")
+@import url("https://raw.githubusercontent.com/Baeconboy/Distinction/main/distinction.css");
+
+:root{
+
+	/*can be a simple color or an image from a direct link*/
+
+	/*color background example*/
+	--background: #0093fa;
+
+	/*image background example*/
+	--background: url("https://i.pinimg.com/originals/ef/7f/b1/ef7fb1b37078b6a2aef8e40710446bfa.jpg");
+
+	/*change this in case your background image has a weird aspect ratio and gets cut off*/
+	--background-move-vertical: 0%;
+
+	/*controls roundness of borders*/
+	/*going above a certain value will make the boxes so round that content may get cut off*/
+	--default-border-radius: 15px;
+
+	/*distance between the boxes (gets applied all 4 sides of the box, so the distance is actually this amount times two)*/
+	--default-box-margins: 2px;
+
+	/*these colors are in the RGBA format, the numbers represent red, green, blue (0-255 respectively), and alpha (0.0 - 1.0)*/
+	--primary-box-color: rgba(0, 20, 30, 0.8);
+	--secondary-box-color: rgba(20, 20, 20, 0.2);
+
+	--primary-button-color: rgba(20, 20, 20, .6);
+	--secondary-button-color: rgba(70, 70, 70, 1.0);
+}
