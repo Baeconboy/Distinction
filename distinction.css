@@ -276,21 +276,3 @@
 .avatarWrapper__500a6{
 	max-width: 100%;
 }
-
-@keyframes statusSlide {
-	0% {
-		right: 0%;
-	}
-	50% {
-		right: 100%;
-	}
-	100% {right: 0%}
-}
-
-.hoverRoll__3ea9e:not(.forceHover__733de){
-	animation-name: statusSlide;
-	animation-delay: 1s;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-	width:auto;
-}
