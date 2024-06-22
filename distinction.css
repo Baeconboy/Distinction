@@ -48,83 +48,83 @@
 }
 
  /*background image*/
-.bg__12180{
+.bg_d4b6c5{
 	background: var(--background) !important;
 	background-size: cover !important;
 	background-position-y: var(--background-move-vertical) !important;
 }
 
 /*transparent backgrounds*/
-.chat__52833,
-.chatContent_f087cb,
-.container__3673d,
-.container__7e23c,
-.container_bd15da,
-.container_debb33,
-.container_f79ab4,
-.inset__61d5b,
-.members__573eb,
-.panels__58331,
-.scroller__89969,
-.section__253ec,
-.selected__11b62,
-.selected__37292,
-.sidebar_e031be,
-.themed_b152d4,
-.themedBackground__3a4c0,
-.userPanelInnerThemed_c2aed9,
-.userProfileOuterUnthemed_e14365,
-.wrapper__216eb,
-.panel_bd8c76,
-.container_e1958d,
-.attachedBars_c1606a,
-.layer_f7d46a,
-.contentRegion__08eba,
-.contentRegionScroller__9ae20,
-.standardSidebarView__12528,
-.sidebarRegionScroller__8113e,
-.folder__17546,
-.container__694a1,
-.wrapper__4e6b6,
-.replyBar_ed6afc,
-.wrapper__6bf2d
+.chat_a7d72e,
+.chatContent_a7d72e,
+.container_bf550a,
+.container_ee69e0,
+.container_c2739c,
+.container_b2ca13,
+.container_cbd271,
+.inset_c0f6a6,
+.members_cbd271,
+.panels_a4d4d9,
+.scroller_c47fa9,
+.section_cd82a7,
+.selected_f6f816,
+.selected_f5eb4b,
+.sidebar_a4d4d9,
+.themed_e44302,
+.themedBackground_d0696b,
+.userPanelInnerThemed_c69a7b,
+.userProfileOuterUnthemed_c69a7b,
+.wrapper_fea3ef,
+.panel_bf1a22,
+.container_adcaac,
+.attachedBars_d0696b,
+.layer_d4b6c5,
+.contentRegion_c25c6d,
+.contentRegionScroller_c25c6d,
+.standardSidebarView_c25c6d,
+.sidebarRegionScroller_c25c6d,
+.folder_bc7085,
+.container_d1c246,
+.wrapper_ef319f,
+.replyBar_b11c5e,
+.wrapper_d880dc
 {
 	background: transparent !important;
 }
 
 /*make things invisible*/
-.form_d8a4a1:before,
-.children_cde9af:after,
-.content__01e65:before,
-.tabBody_a90ea8:before,
-.channel__0aef5:has(.link__3a950[href="/library"]),
-.channel__0aef5:has(.link__3a950[href="/store"]),
-.channel__0aef5:has(.link__3a950[href="/shop"]),
-.button__581d0[aria-label="Send a gift"]
+.form_a7d72e:before,
+.children_e44302:after,
+.content_a7d72e:before,
+.tabBody_c2739c:before,
+.channel_c91bad:has(.link_c91bad[href="/library"]),
+.channel_c91bad:has(.link_c91bad[href="/store"]),
+.channel_c91bad:has(.link_c91bad[href="/shop"]),
+.button_dd4f85[aria-label="Send a gift"]
 
 {
 	display:none;
 }
 
 /*Boxes*/
-.channelTextArea_c2094b,
-.container__26baa,
-.container__7e23c,
-.members__573eb,
-.messagesWrapper_add28b,
-.nowPlayingColumn_b025fe,
-.peopleColumn__0c784,
-.privateChannels__9b518,
-.profilePanel_e2cafe,
-.searchBarComponent__8f95f,
-.tree__7a511,
-.typingDots__0448d,
-.wrapper__57349,
-.panels__58331,
-.container_b92032,
-.side_b4b3f6,
-.contentColumn__5f80b,
-.callContainer__1477d
+.channelTextArea_a7d72e,
+.container_e44302,
+.container_ee69e0,
+.members_cbd271,
+.messagesWrapper_e2e187,
+.nowPlayingColumn_c2739c,
+.peopleColumn_c2739c,
+.privateChannels_f0963d,
+.profilePanel_b433b4,
+.searchBarComponent_f0963d,
+.tree_fea3ef,
+.typingDots_d7ebeb,
+.wrapper_faf5ab,
+.panels_a4d4d9,
+.container_a6d69a,
+.side_a0,
+.contentColumn_c25c6d,
+.callContainer_d880dc
 {
 	backdrop-filter: blur(5px);
     background-color: var(--primary-box-color) !important;
@@ -132,7 +132,7 @@
 	margin: var(--default-box-margins) !important;
 }
 /*Special case box: Text box in chat*/
-.form_d8a4a1{
+.form_a7d72e{
 	margin-top: 0px;
 	margin-bottom: calc(var(--default-box-margins) *2);
 	margin-right: calc(var(--default-box-margins)*2);
@@ -140,24 +140,24 @@
 }
 
 /*Fix size of text box*/
-.channelTextArea_c2094b, .wrapper__57349{
+.channelTextArea_a7d72e, .wrapper_faf5ab{
 	width: 100%;
 	height:100%;
 	padding:0px;
 }
 
 /*Make little profile box on the bottom and the "follow channel" box the same height as text box for aesthetics*/
-.wrapper__57349{
+.wrapper_faf5ab{
 	height: 47px;
 }
 
-.container_debb33{
+.container_b2ca13{
 	height: auto;
 	display: flex;
 	flex-direction: column-reverse;
 }
 
-.button_ae40a4, .closeButton__8177f, .button_b82d53, .button_d4bf9b, .iconWrapper_de6cd1{
+.button_f67531, .closeButton_df5532, .button_adcaac, .button_ef319f, .iconWrapper_e44302{
 	appearance: auto;
 	border-left-width: 0px;
 	border-right-width: 0px;
@@ -170,79 +170,79 @@
 	min-width: 32px;
 	min-height:32px;
 }
-.button_ae40a4:active, .closeButton__8177f:active, .button_ae40a4[aria-checked="true"], .button_b82d53:active, .button_d4bf9b:active, .iconWrapper_de6cd1:active{
+.button_f67531:active, .closeButton_df5532:active, .button_f67531[aria-checked="true"], .button_adcaac:active, .button_ef319f:active, .iconWrapper_e44302:active{
 	border-bottom: 1px solid var(--secondary-button-color) !important;
 }
 
 /*make profile banner rounded*/
-.banner__6d414{
+.banner_c3e427{
 	border-radius:var(--default-border-radius);
 }
 
 /*make server folders actually fit the server icons*/
-.expandedFolderBackground_b1385f{
+.expandedFolderBackground_bc7085{
 	width: 56px;
 	left: 8px;
 	background-color: var(--primary-button-color);
 }
 
 /*make members list take up entire sidebar*/
-.membersWrap__5ca6b{
+.membersWrap_cbd271{
 	height:100%;
 }
 
 /*make offline server members not transparent*/
-.offline__55fab{
+.offline_a31c43{
 	opacity: 1;
 }
 
 /*server members are secondary box*/
-.member_b44d5d, .member_aa4760{
+.member_cbd271, .member_a31c43{
 	background: var(--secondary-box-color);
 	margin-bottom: var(--default-box-margins);
 }
 
 
 /*dms get the secondary box color*/
-.channel__0aef5, .wrapper__3c6d5{
+.channel_c91bad, .wrapper_cd82a7{
 	transition: margin-left .4s !important;
 	margin-bottom: var(--default-box-margins);
 	background: var(--secondary-box-color);
 }
 
 /*selected dms get shifted to the side*/
-.channel__0aef5:has(.selected__37292){
+.channel_c91bad:has(.selected_f5eb4b){
 	margin-left:20px;
 }
 
 /*fixes for the "follow channel" box*/
-.wrapper__57349{
+.wrapper_faf5ab{
 	margin-left: var(--default-box-margins) !important;
 	margin-bottom:0px !important;
 	top:1px;
 }
 
 /*move typing animation up*/
-.typing__6fd1d{
+.typing_d7ebeb{
 	bottom:55px;
 	animation-name: typingAnim;
 	animation-duration: 0.4s;
 }
 
 /*give typing animation a bit of padding on the right*/
-.typingDots__0448d{
+.typingDots_d7ebeb{
 	padding-right:10px;
 }
 /*remove border of weird activity box*/
-.scroller__7c25e, .wrapper__3c6d5{
+.scroller_bf550a, .wrapper_cd82a7{
 	border:none;
 }
 
-.searchBar__621ec, .searchBar__310d8{
+.searchBar_f0963d, .searchBar_e0840f{
 	background: var(--secondary-box-color) !important;
 }
 
-.newMessagesBar__8b272{
+.newMessagesBar_cf58b5{
 	width:100%;
 	left:0px;
 	border-radius: var(--default-border-radius);
@@ -254,12 +254,12 @@
 	
 }
 
-.channel__0aef5{
+.channel_c91bad{
 	animation-name: fadeInDMs;
 	animation-duration: .4s;
 }
 
-.header__71a82 {
+.header_a0 {
 	margin-top:10px;
 }
 
@@ -269,24 +269,24 @@
 	animation-fill-mode: forwards;
 }
 
-.sidebar_e031be{
+.sidebar_a4d4d9{
 	min-width: ;
 }
 
-.wrapper__4e6b6{
+.wrapper_ef319f{
 	height:auto;
 	box-shadow: none !important;
 }
 
-.avatarWrapper__500a6{
+.avatarWrapper_b2ca13{
 	max-width: 100%;
 }
 
-.container__2ed72{
+.container_cebd1c{
 	border-radius:5px;
 }
 
-.icon_ae0b42{
+.icon_e44302{
 	width:70%;
 	margin: auto;
 	margin-top: 2px;
