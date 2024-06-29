@@ -107,6 +107,7 @@
 }
 
 /*Boxes*/
+.userPanelInner_c69a7b,
 .channelTextArea_a7d72e,
 .container_e44302,
 .container_ee69e0,
@@ -134,16 +135,25 @@
 /*Special case box: Text box in chat*/
 .form_a7d72e{
 	margin-top: 0px;
-	margin-bottom: calc(var(--default-box-margins) *2);
-	margin-right: calc(var(--default-box-margins)*2);
 	padding:0px;
+	margin-bottom: calc(var(--default-box-margins)*-2);
 }
-
+.bannerSVGWrapper_b32cc2{
+	min-width:100% !important;
+	min-height:100% !important;
+}
 /*Fix size of text box*/
-.channelTextArea_a7d72e, .wrapper_faf5ab{
+.channelTextArea_a7d72e, .wrapper_faf5ab, {
 	width: 100%;
 	height:100%;
 	padding:0px;
+}
+.subtitleContainer_a7d72e{
+	margin-right: calc(var(--default-box-margins)*2) !important;
+}
+
+.content_a7d72e{
+	margin-bottom: calc(var(--default-box-margins)*2);
 }
 
 /*Make little profile box on the bottom and the "follow channel" box the same height as text box for aesthetics*/
@@ -237,6 +247,10 @@
 /*remove border of weird activity box*/
 .scroller_bf550a, .wrapper_cd82a7{
 	border:none;
+}
+
+.scroller_e2e187{
+	border-radius: var(--default-border-radius);
 }
 
 .searchBar_f0963d, .searchBar_e0840f{
