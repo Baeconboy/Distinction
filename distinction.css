@@ -56,6 +56,7 @@
 }
 
 /*transparent backgrounds*/
+.notice_c02a8d,
 .chat_a7d72e,
 .chatContent_a7d72e,
 .container_bf550a,
@@ -108,6 +109,7 @@
 }
 
 /*Boxes*/
+.notice_c02a8d,
 .userPanelInner_c69a7b,
 .channelTextArea_a7d72e,
 .container_e44302,
@@ -168,7 +170,7 @@
 	flex-direction: column-reverse;
 }
 
-.button_f67531, .closeButton_df5532, .button_adcaac, .button_ef319f, .iconWrapper_e44302{
+.button_f67531, .closeButton_df5532, .button_adcaac, .button_ef319f, .iconWrapper_e44302, .button_c02a8d{
 	appearance: auto;
 	border-left-width: 0px;
 	border-right-width: 0px;
@@ -181,7 +183,7 @@
 	min-width: 32px;
 	min-height:32px;
 }
-.button_f67531:active, .closeButton_df5532:active, .button_f67531[aria-checked="true"], .button_adcaac:active, .button_ef319f:active, .iconWrapper_e44302:active{
+.button_f67531:active, .closeButton_df5532:active, .button_f67531[aria-checked="true"], .button_adcaac:active, .button_ef319f:active, .iconWrapper_e44302:active, .button_c02a8d:active{
 	border-bottom: 1px solid var(--secondary-button-color) !important;
 }
 
