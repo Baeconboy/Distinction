@@ -224,7 +224,8 @@
 
 /*move typing animation up*/
 .typing_d7ebeb{
-	bottom:55px;
+	top: -30px;
+	left: 5px;
 	animation-name: typingAnim;
 	animation-duration: 0.4s;
 }
