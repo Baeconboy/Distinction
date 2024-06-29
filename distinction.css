@@ -8,6 +8,7 @@
 :root{
 	--background: url("https://i.pinimg.com/originals/ef/7f/b1/ef7fb1b37078b6a2aef8e40710446bfa.jpg");
 	--background-move-vertical: 0%;
+	--background-blur: 5px;
 
 	--default-border-radius: 15px;
 	--default-box-margins: 2px;
@@ -20,7 +21,7 @@
 
 @keyframes backBlur {
 	to {
-		backdrop-filter: blur(5px);
+		backdrop-filter: blur(var(--background-blur));
 	}
 }
 
@@ -127,7 +128,7 @@
 .contentColumn_c25c6d,
 .callContainer_d880dc
 {
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(var(--background-blur));
     background-color: var(--primary-box-color) !important;
 	border-radius: var(--default-border-radius) !important;
 	margin: var(--default-box-margins) !important;
