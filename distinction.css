@@ -56,6 +56,7 @@
 }
 
 /*transparent backgrounds*/
+.fullSizeInnerThemed_c69a7b,
 .notice_c02a8d,
 .chat_a7d72e,
 .chatContent_a7d72e,
@@ -109,6 +110,8 @@
 }
 
 /*Boxes*/
+.biteSizeInnerThemed_c69a7b,
+.fullscreenOnMobile_f9a4c9,
 .notice_c02a8d,
 .userPanelInner_c69a7b,
 .channelTextArea_a7d72e,
@@ -141,10 +144,7 @@
 	padding:0px;
 	margin-bottom: calc(var(--default-box-margins)*-2);
 }
-.bannerSVGWrapper_b32cc2{
-	min-width:100% !important;
-	min-height:100% !important;
-}
+
 /*Fix size of text box*/
 .channelTextArea_a7d72e, .wrapper_faf5ab, {
 	width: 100%;
@@ -264,6 +264,7 @@
 	width:100%;
 	left:0px;
 	border-radius: var(--default-border-radius);
+	background-color: var(--secondary-box-color);
 }
 
 .increasedActivityMainCard_e53744{
