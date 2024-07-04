@@ -56,6 +56,7 @@
 }
 
 /*transparent backgrounds*/
+.userPopoutInner_c69a7b,
 .fullSizeInnerThemed_c69a7b,
 .notice_c02a8d,
 .chat_a7d72e,
@@ -110,7 +111,8 @@
 }
 
 /*Boxes*/
-.biteSizeInnerThemed_c69a7b,
+.submenu_d90b3d,
+.accountProfilePopoutWrapper_b2ca13,
 .fullscreenOnMobile_f9a4c9,
 .notice_c02a8d,
 .userPanelInner_c69a7b,
@@ -144,6 +146,18 @@
 	padding:0px;
 	margin-bottom: calc(var(--default-box-margins)*-2);
 }
+
+.animatedContainer_fd6364{
+	border-radius: var(--default-border-radius) !important;
+}
+
+#status > div > div:nth-child(1) > div > div.theme-dark.layer_cd0de5{
+	z-index:10 !important;
+	left: 0vw !important;
+	bottom: 10vh !important;
+	top: initial !important;
+}
+
 
 /*Fix size of text box*/
 .channelTextArea_a7d72e, .wrapper_faf5ab, {
