@@ -1,28 +1,67 @@
 /**
-* @name Distinction
+* @name Distinction Revamped
 * @author baecoom
-* @version 0.1
-* @description distinct boxes for all your distinct discord needs (very distinct)
+* @version 2.0
+* @description distinct boxes for all your distinct discord needs (very revamped)
 * @source https://github.com/Baeconboy/Distinction
 */
+
 :root{
-	--background: url("https://i.pinimg.com/originals/ef/7f/b1/ef7fb1b37078b6a2aef8e40710446bfa.jpg");
-	--background-move-vertical: 0%;
-	--background-blur: 5px;
+    
+/* Background can be a simple color or an image from a direct link. 
 
-	--default-border-radius: 15px;
-	--default-box-margins: 2px;
-	--primary-box-color: rgba(0, 20, 30, 0.8);
-	--secondary-box-color: rgba(20, 20, 20, 0.2);
+ Color Background Example:*/
+--background: #0093FA;
 
-	--primary-button-color: rgba(20, 20, 20, .6);
-	--secondary-button-color: rgba(70, 70, 70, 1);
+ Image Background example:
+--background: url('https://i.pinimg.com/originals/ef/7f/b1/ef7fb1b37078b6a2aef8e40710446bfa.jpg'); 
+
+/* Control the blurriness of your background image behind the boxes.
+ default: 5px*/
+--background-blur: 5px;
+
+/* change this in case your background image has a weird aspect ratio and gets cut off
+ Default: 0%*/
+--background-move-vertical: 0%;
+
+/* This is the discord icon that leads to the friends list.*/
+--discord-icon: url('https://discord.com/assets/3145bdb4ad97e9e47055.webp');
+
+/* controls roundness of borders
+ going above a certain value will make the boxes so round that content may get cut off
+ Default: 15px*/
+--default-border-radius: 15px;
+
+/* distance between the boxes (gets applied all 4 sides of the box, so the distance is actually this amount times two)
+ Default: 2px;*/
+--default-box-margins: 2px;
+
+/* Control the color of buttons and similar things
+ The following colors are in the RGBA format, the numbers represent red, green, blue (0-255 respectively), and alpha (0.0 - 1.0)*/
+--primary-box-color: rgba(0, 20, 30, 0.8);
+--secondary-box-color: rgba(20, 20, 20, 0.2);
+
+--hovered-button-color: rgba(30, 30, 30, .6);
+--primary-button-color: rgba(20, 20, 20, .6);
+--secondary-button-color: rgba(70, 70, 70, 1.0);
+
+/* Accent colors:*/
+  --accent-one: rgba(0, 147, 250, 1);
+  --accent-one-darker: rgba(0, 100, 200, 1);
 }
 
-@keyframes backBlur {
-	to {
-		backdrop-filter: blur(var(--background-blur));
-	}
+
+.childWrapper_f90abb > img /*discord icon*/
+{
+	content: var(--discord-icon);
+}
+
+.childWrapper_f90abb{
+	background-color: var(--secondary-button-color);
+}
+
+.selected_f90abb > .childWrapper_f90abb {
+	background-color: var(--primary-button-color) !important;
 }
 
 @keyframes typingAnim {
@@ -34,158 +73,97 @@
 	}
 }
 
-@keyframes fadeInDMs {
-	from {
-		left: 200px;
-	}
-	to {
-		left: 0px;
-	}
-}
-@keyframes slideBottom {
-	from {
-		height:0px;
-	}
-}
-
- /*background image*/
-.bg_d4b6c5{
+.bg_d4b6c5, .container_e40c16, body
+{
 	background: var(--background) !important;
 	background-size: cover !important;
 	background-position-y: var(--background-move-vertical) !important;
 }
 
-/*transparent backgrounds*/
-.userPopoutInner_c69a7b,
-.fullSizeInnerThemed_c69a7b,
-.notice_c02a8d,
-.chat_a7d72e,
-.chatContent_a7d72e,
-.container_bf550a,
-.container_ee69e0,
-.container_c2739c,
-.container_b2ca13,
-.container_cbd271,
-.inset_c0f6a6,
-.members_cbd271,
-.panels_a4d4d9,
-.scroller_c47fa9,
-.section_cd82a7,
-.selected_f6f816,
-.selected_f5eb4b,
-.sidebar_a4d4d9,
-.themed_e44302,
-.themedBackground_d0696b,
-.userPanelInnerThemed_c69a7b,
-.userProfileOuterUnthemed_c69a7b,
-.wrapper_fea3ef,
-.panel_bf1a22,
-.container_adcaac,
-.attachedBars_d0696b,
-.layer_d4b6c5,
-.contentRegion_c25c6d,
-.contentRegionScroller_c25c6d,
-.standardSidebarView_c25c6d,
-.sidebarRegionScroller_c25c6d,
-.folder_bc7085,
-.container_d1c246,
-.wrapper_ef319f,
-.replyBar_b11c5e,
-.wrapper_d880dc
-{
-	background: transparent !important;
-}
-
 /*make things invisible*/
+.slider_cebd1c,
 .form_a7d72e:before,
-.children_e44302:after,
+.children_fc4f04:after,
 .content_a7d72e:before,
 .tabBody_c2739c:before,
 .channel_c91bad:has(.link_c91bad[href="/library"]),
 .channel_c91bad:has(.link_c91bad[href="/store"]),
 .channel_c91bad:has(.link_c91bad[href="/shop"]),
+.item_a0[data-tab-id="Discord Nitro"],
+.item_a0[data-tab-id="Nitro Server Boost"],
+.item_a0[data-tab-id="Subscriptions"],
+.item_a0[data-tab-id="Library Inventory"],
+.item_a0[data-tab-id="Billing"],
 .button_dd4f85[aria-label="Send a gift"]
-
 {
 	display:none;
 }
 
-/*Boxes*/
-.userProfileOuter_c69a7b,
-.submenu_d90b3d,
-.accountProfilePopoutWrapper_b2ca13,
-.fullscreenOnMobile_f9a4c9,
-.notice_c02a8d,
+/*Invisible Background*/
+.container_c2739c, /*friends menu*/
+.pageBody_c2efea, /*channels & roles -> browse channels*/
+.wrapper_faf5ab, /*follow this channel box*/
+.folder_bc7085, /*server folder*/
+.link_d8bfb3, /*selected server channel*/
+.container_d1c246, /*Thread chat*/
+.attachedBars_d0696b, .replyBar_b11c5e, /*reply bar*/
+.wrapper_cdfd51, .wrapper_b75bb9, /*loading chat*/
+.searchBar_a46bef, /*chat search bar*/
+.button_adcaac, /*call control buttons*/
+.contentRegionScroller_c25c6d, /*settings content*/
 .userPanelInner_c69a7b,
-.channelTextArea_a7d72e,
-.container_e44302,
-.container_ee69e0,
-.members_cbd271,
-.messagesWrapper_e2e187,
-.nowPlayingColumn_c2739c,
-.peopleColumn_c2739c,
-.privateChannels_f0963d,
-.profilePanel_b433b4,
-.searchBarComponent_f0963d,
-.tree_fea3ef,
-.typingDots_d7ebeb,
-.wrapper_faf5ab,
-.panels_a4d4d9,
-.container_a6d69a,
-.side_a0,
-.contentColumn_c25c6d,
-.callContainer_d880dc
+.sidebar_a4d4d9, .scroller_c47fa9, /*DMs list*/
+.container_b2ca13, .container_adcaac, /*Profile bar left of chat*/
+.root_bc9cc2,
+.userProfileOuter_c69a7b,
+.userProfileInner_c69a7b,
+.chat_a7d72e, /*Entire chat box + top bar*/
+.theme-dark .themed_fc4f04, /*bar above chat*/
+.chatContent_a7d72e, .channelTextArea_a7d72e, /*chat box*/
+.themedBackground_d0696b,
+.backdrop_e4f2ae, /*darkened background in image view*/
+.standardSidebarView_c25c6d, .layer_d4b6c5, /*settings background*/
+.container_cbd271, .members_cbd271, /*server member list*/
+.sidebarRegionScroller_c25c6d, /*settings options*/
+.container_bf550a, /*friends "now playing"*/
+.panel_bf1a22 /*activity panel*/
+{
+	background: transparent !important;
+}
+
+/*Boxes*/
+.nowPlayingColumn_c2739c, /*friends "now playing"*/
+.peopleColumn_c2739c, /*friends menu*/
+.container_f1fd9c, /*channels & roles window*/
+.auto_c49869.scrollerBase_c49869:not(.scroller_e2e187):not(.peopleList_e0840f):not(.contentRegionScroller_c25c6d), /*server guide*/
+.container_fc4f04.themed_fc4f04:not(.title_a7d72e), /*thread chat*/
+.notice_c02a8d, /*unread every message notice*/
+.container_a6d69a, /*Threads menu*/
+.content_e40c16, /*loading*/
+.contentRegion_c25c6d, /*settings content*/
+.userPanelOuter_c69a7b,
+.userProfileOuter_c69a7b:before,
+.guilds_a4d4d9, /*server list*/
+.privateChannels_f0963d, /*DMs list*/
+.panels_a4d4d9, /*Profile bar left of chat*/
+.chat_a7d72e > .subtitleContainer_a7d72e, /*bar above chat*/
+.messagesWrapper_e2e187, /*chat box*/
+.form_a7d72e, /*chat text box*/
+.sidebarRegion_c25c6d, /*settings options*/
+.container_ee69e0, /*server channel list*/
+.membersWrap_cbd271, /*server member list*/
+.wrapper_d880dc /*call*/
 {
 	backdrop-filter: blur(var(--background-blur));
     background-color: var(--primary-box-color) !important;
 	border-radius: var(--default-border-radius) !important;
 	margin: var(--default-box-margins) !important;
 }
-/*Special case box: Text box in chat*/
-.form_a7d72e{
-	margin-top: 0px;
-	padding:0px;
-	margin-bottom: calc(var(--default-box-margins)*-2);
-}
-
-.animatedContainer_fd6364{
-	border-radius: var(--default-border-radius) !important;
-}
-
-#status > div > div:nth-child(1) > div > div.theme-dark.layer_cd0de5, #account > div > div:nth-child(1) > div > div.theme-dark.layer_cd0de5{
-	z-index:10 !important;
-	left: 0vw !important;
-	bottom: 10vh !important;
-	top: initial !important;
-}
-
-
-/*Fix size of text box*/
-.channelTextArea_a7d72e, .wrapper_faf5ab, {
-	width: 100%;
-	height:100%;
-	padding:0px;
-}
-.subtitleContainer_a7d72e{
-	margin-right: calc(var(--default-box-margins)*2) !important;
-}
-
-.content_a7d72e{
-	margin-bottom: calc(var(--default-box-margins)*2);
-}
-
-/*Make little profile box on the bottom and the "follow channel" box the same height as text box for aesthetics*/
-.wrapper_faf5ab{
-	height: 47px;
-}
-
-.container_b2ca13{
-	height: auto;
-	display: flex;
-	flex-direction: column-reverse;
-}
-
-.button_f67531, .closeButton_df5532, .button_adcaac, .button_ef319f, .iconWrapper_e44302, .button_c02a8d{
+/*Secondary Boxes*/
+.containerDefault_f6f816, /*server channel*/
+.member_a31c43, /*server member*/
+.listItemContents_e05dae /*friends menu entries*/
+{
 	appearance: auto;
 	border-left-width: 0px;
 	border-right-width: 0px;
@@ -193,135 +171,372 @@
 	border-radius:5px !important;
 	margin: 5px !important;
 	background: var(--primary-button-color) !important;
-	border-bottom: 5px solid var(--secondary-button-color) !important;
+	border-bottom: 5px solid var(--secondary-button-color);
 	transition: border-bottom .2s !important;
 	min-width: 32px;
 	min-height:32px;
 }
-.button_f67531:active, .closeButton_df5532:active, .button_f67531[aria-checked="true"], .button_adcaac:active, .button_ef319f:active, .iconWrapper_e44302:active, .button_c02a8d:active{
+
+/*buttons*/
+.button_dd4f85, /*profile edit buttons*/
+.reaction_ec6b19, /*reactions*/
+.button_faf5ab, /*follow channel button*/
+.button_c02a8d, /*unread every message notice buttons*/
+.item_a0, /*settings item*/
+.closeButton_df5532, /*settings close button*/
+.button_f67531:not(.disabledButtonWrapper_dd4f85), /*audio control buttons*/
+.button_adcaac:not(.disabledButtonWrapper_dd4f85), /*call control buttons*/
+.iconWrapper_fc4f04:not(.privateChannelRecipientsInviteButtonIcon_c47fa9), /*top bar buttons*/
+.outer_c0f6a6, /*friends menu entries*/
+.channel_c91bad /*dm entry*/
+{
+	appearance: auto;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-radius:5px !important;
+	margin: 5px !important;
+	background: var(--primary-button-color) !important;
+	border-bottom: 5px solid var(--secondary-button-color);
+	transition: border-bottom .2s, background-color .3s !important;
+	min-width: 32px;
+	min-height:32px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*hovered buttons*/
+.button_dd4f85:hover, /*profile edit buttons*/
+.reaction_ec6b19:hover, /*reactions*/
+.button_faf5ab:hover, /*follow channel button*/
+.button_c02a8d:hover, /*unread every message notice buttons*/
+.item_a0:hover, /*settings item*/
+.closeButton_df5532:hover, /*settings close button*/
+.button_f67531:not(.disabledButtonWrapper_dd4f85):hover, /*audio control buttons*/
+.button_adcaac:not(.disabledButtonWrapper_dd4f85):hover, /*call control buttons*/
+.iconWrapper_fc4f04:not(.privateChannelRecipientsInviteButtonIcon_c47fa9):hover, /*top bar buttons*/
+.outer_c0f6a6:hover, /*friends menu entries*/
+.channel_c91bad:hover /*dm entry*/
+{
+	background-color: var(--hovered-button-color) !important;
+}
+
+/*selected buttons*/
+.button_dd4f85:active, /*profile edit buttons*/
+.reaction_ec6b19.reactionMe_ec6b19, /*reactions*/
+.button_faf5ab:active, /*follow channel button*/
+.button_c02a8d:active, /*unread every message notice buttons*/
+.item_a0[aria-selected="true"], .item_a0:active, /*settings item*/
+.closeButton_df5532:active, /*settings close button*/
+.button_f67531:active, .button_f67531[aria-checked="true"], /*audio control buttons*/
+.button_adcaac:active, .buttonActive_adcaac, /*call control buttons*/
+.iconWrapper_fc4f04:active, /*top bar buttons*/
+.listItemContents_e05dae:active /*friends menu entries*/
+{
 	border-bottom: 1px solid var(--secondary-button-color) !important;
 }
 
-/*make profile banner rounded*/
-.banner_c3e427{
-	border-radius:var(--default-border-radius);
+/*text input bars*/
+.searchBar_e0840f, /*friends menu search bar*/
+.searchBarComponent_f0963d, /*Find or start a conversation*/
+.search_ff5f90
+{
+	min-height: 32px;
+	min-width: 32px;
+	border-radius: 5px;
+	border-bottom: 5px solid var(--secondary-button-color);
+	background: var(--primary-button-color) !important;
 }
 
-/*make server folders actually fit the server icons*/
-.expandedFolderBackground_bc7085{
-	width: 56px;
-	left: 8px;
-	background-color: var(--primary-button-color);
+
+.form_a7d72e /*Chat text box*/
+{
+	padding: 0px;
 }
 
-/*make members list take up entire sidebar*/
-.membersWrap_cbd271{
+.channelTextArea_a7d72e /*chat text box*/
+{
+	margin:0px;
+}
+
+.container_b2ca13 /*profile bar left of chat*/
+{
+	min-height: 80px;
+	height: auto;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.backdrop_e4f2ae /*darkened background in image view*/
+{
+	backdrop-filter: blur(var(--background-blur)) !important;
+
+}
+
+/*fix for the switch profile and status buttons spasming out*/
+.userProfileOuter_c69a7b:before{
+	position: absolute;
+	content:"";
+	width: 100%;
 	height:100%;
+	backdrop-filter: blur(var(--background-blur));
 }
 
-/*make offline server members not transparent*/
-.offline_a31c43{
-	opacity: 1;
+.side_a0:not(.searchHeaderTabList_b7c924) /*settings options*/
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.header_a0 /*settings options separator*/
+{
+	width:100%;
+	text-align: center;
+	border-top: var(--primary-button-color) solid 2px;
 }
 
-/*server members are secondary box*/
-.member_cbd271, .member_a31c43{
-	background: var(--secondary-box-color);
-	margin-bottom: var(--default-box-margins);
+.sidebar_c25c6d /*settings options*/
+{
+	width:100%;
 }
 
-
-/*dms get the secondary box color*/
-.channel_c91bad, .wrapper_cd82a7{
-	transition: margin-left .4s !important;
-	margin-bottom: var(--default-box-margins);
-	background: var(--secondary-box-color);
+.sidebarRegion_c25c6d /*settings options*/
+{
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	overflow:scroll;
 }
 
-/*selected dms get shifted to the side*/
-.channel_c91bad:has(.selected_f5eb4b){
-	margin-left:20px;
+.sidebarRegion_c25c6d::-webkit-scrollbar /*settings options*/
+{
+	display: none;
 }
 
-/*fixes for the "follow channel" box*/
-.wrapper_faf5ab{
-	margin-left: var(--default-box-margins) !important;
-	margin-bottom:0px !important;
-	top:1px;
-}
-
-/*move typing animation up*/
-.typing_d7ebeb{
+.typing_d7ebeb /*typing animation*/
+{
 	top: -30px;
 	left: 5px;
 	animation-name: typingAnim;
 	animation-duration: 0.4s;
+
 }
 
-/*give typing animation a bit of padding on the right*/
-.typingDots_d7ebeb{
+.typingDots_d7ebeb /*typing animation*/
+{
 	padding-right:10px;
 }
-/*remove border of weird activity box*/
-.scroller_bf550a, .wrapper_cd82a7{
-	border:none;
+
+.userPanelOuter_c69a7b{
+	height: 100%;
 }
 
-.scroller_e2e187{
-	border-radius: var(--default-border-radius);
+.disabledButtonWrapper_dd4f85:not(.button_adcaac) /*disabled call control buttons*/
+{
+	display: flex;
 }
 
-.searchBar_f0963d, .searchBar_e0840f{
-	background: var(--secondary-box-color) !important;
+.iconWrapper_fc4f04:not(.privateChannelRecipientsInviteButtonIcon_c47fa9) /*top bar buttons*/
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.newMessagesBar_cf58b5{
+.searchHeaderTabList_b7c924 > .item_a0 /*message search buttons*/
+{
+	padding-top:0px;
+	padding-bottom: 0px;
+}
+
+.membersWrap_cbd271 /*server member list*/
+{
+	height:100%;
+}
+
+.listItemContents_e05dae /*friends menu entries*/
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top:5px;
+	padding-bottom:10px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.userInfo_f3939d /*friends menu entries*/
+{
+	max-width: 80%;
+}
+
+.channel_c91bad, .wrapper_cd82a7, /*DM entry*/
+.containerDefault_f6f816 /*server channel*/
+{
+	transition: margin-left 1s, background-position-y 1sn, border-bottom .2s, background-color .3s !important;
+;
+	background-position-y: 0px !important;
+	background-size: 200% 200% !important;
+	background-image: linear-gradient(0deg, var(--secondary-button-color) 0%, var(--secondary-button-color) 20%, transparent 50%) !important;
+
+}
+
+.selected_f5eb4b, /*DM entry*/
+.selected_f6f816 /*server channel*/
+{
+	background: transparent;
+}
+
+.channel_c91bad:has(.selected_f5eb4b), /*DM entry*/
+.containerDefault_f6f816.selected_f6f816 /*server channel*/
+
+{
+	background-position-y: -20px !important;
+	margin-left: 20px !important;
+}
+
+.hoverRoll_e07331 /*custom status overflow protection*/
+{
+	max-width: 150px;
+}
+
+.customStatus_b2ca13 > span /*custom status overflow protection*/
+{
+	white-space: normal;
+}
+
+.content_e40c16 /*loading*/
+{
+	padding:10px;
+}
+
+.unread_d8bfb3 /*unread server channel pill*/
+{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+	height: calc(100% + 5px);
+	width: 50%;
+	margin-top: 0px;
+	top: 0px;
+	background: linear-gradient(90deg, var(--accent-one) 25%, transparent 100%);
+}
+
+.vc-settings-card:after /*vencord theme settings*/
+{
 	width:100%;
-	left:0px;
+	color: var(--text-normal);
+	font-size: 14px;
+	line-height: 18px;
+	content: " Theme variables:\A Background can be a simple color or an image from a direct link. \A\A Color Background Example:\A--background: #0093FA;\A\A Image Background example:\A--background: url('https://i.pinimg.com/originals/ef/7f/b1/ef7fb1b37078b6a2aef8e40710446bfa.jpg'); \A\A Control the blurriness of your background image behind the boxes.\A default: 5px\A--background-blur: 5px;\A\A change this in case your background image has a weird aspect ratio and gets cut off\A Default: 0%\A--background-move-vertical: 0%;\A\A This is the discord icon that leads to the friends list.\A--discord-icon: url('https://discord.com/assets/3145bdb4ad97e9e47055.webp');\A\A controls roundness of borders\A going above a certain value will make the boxes so round that content may get cut off\A Default: 15px\A--default-border-radius: 15px;\A\A distance between the boxes (gets applied all 4 sides of the box, so the distance is actually this amount times two)\A Default: 2px;\A--default-box-margins: 2px;\A\A Control the color of buttons and similar things\A The following colors are in the RGBA format, the numbers represent red, green, blue (0-255 respectively), and alpha (0.0 - 1.0)\A--primary-box-color: rgba(0, 20, 30, 0.8);\A--secondary-box-color: rgba(20, 20, 20, 0.2);\A\A--hovered-button-color: rgba(30, 30, 30, .6);\A--primary-button-color: rgba(20, 20, 20, .6);\A--secondary-button-color: rgba(70, 70, 70, 1.0);\A\A Accent colors:\A  --accent-one: rgba(0, 147, 250, 1);\A  --accent-one-darker: rgba(0, 100, 200, 1);";
+	white-space: pre-line;
+	display:block;
+}
+
+.expandedFolderBackground_bc7085 /*expanded server folder background*/
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	left: 7px;
+	background-color: var(--accent-one-darker);
 	border-radius: var(--default-border-radius);
-	background-color: var(--secondary-box-color);
 }
 
-.increasedActivityMainCard_e53744{
-	border-radius: var(--default-border-radius);
-	background-color: var(--secondary-box-color);
-	
+.wrapper_faf5ab /*follow this channel box*/
+{
+	margin-bottom:0px;
 }
 
-.channel_c91bad{
-	animation-name: fadeInDMs;
-	animation-duration: .4s;
+.top_a0 .item_a0 /*channels & roles -> browse channels*/
+{
+	border-bottom: 5px solid var(--secondary-button-color);
 }
 
-.header_a0 {
-	margin-top:10px;
+.tabBarItem_f1fd9c, /*channels & roles -> browse channels*/
+.vc-settings-tab-bar-item, /*vencord settings menu tabs*/
+.settingsTabBarItem_d576e9, /*settings menu tabs*/
+.tabBarItem_bff66b, /*settings menu tabs*/
+.tab_d8bb15 /*settings menu tabs*/
+{
+	padding-bottom:0px;
+	padding-left: 5px;
+	padding-right:5px;
 }
 
-.backdrop__1a911{
-	animation-name: backBlur;
-	animation-duration: .5s;
-	animation-fill-mode: forwards;
+.peopleListItem_d51464:hover{
+	padding:0px;
 }
 
-.sidebar_a4d4d9{
-	min-width: ;
+.container_cebd1c /*slide toggle button*/
+{
+	border-radius:5px !important;
+	margin: 5px !important;
+	background-color: transparent !important;
+	background: url("https://i.imgur.com/vxDYPhx.png") 0 0 no-repeat, linear-gradient(115deg, rgba(119,221,119,1) 24%, var(--secondary-button-color) 26%, var(--secondary-button-color) 75%, rgba(255,105,97,1) 77%) ;
+	background-size: 50px, 100px;
+	background-position-x: -25px, -50px;				
+	border-bottom: 5px solid var(--secondary-button-color);
+	transition: border-bottom .2s, background-position .2s !important;
+	min-width: 50px;
+	min-height:30px;
 }
 
-.wrapper_ef319f{
-	height:auto;
-	box-shadow: none !important;
+.container_cebd1c.checked_cebd1c /*slide toggle button activated*/
+{
+
+	background-position-x: 24px, 0px;
 }
 
-.avatarWrapper_b2ca13{
-	max-width: 100%;
+.attachButton_f298d4 /*chat attachment button*/
+{
+	padding: 0px 0px 0px 0px;
+	height:40px;
+	width:40px;
 }
 
-.container_cebd1c{
-	border-radius:5px;
-}
+/*
 
-.icon_e44302{
-	width:70%;
-	margin: auto;
-	margin-top: 2px;
-}
+ Theme variables:
+ Background can be a simple color or an image from a direct link. 
+
+ Color Background Example:
+--background: #0093FA;
+
+ Image Background example:
+--background: url('https://i.pinimg.com/originals/ef/7f/b1/ef7fb1b37078b6a2aef8e40710446bfa.jpg'); 
+
+ Control the blurriness of your background image behind the boxes.
+ default: 5px
+--background-blur: 5px;
+
+ change this in case your background image has a weird aspect ratio and gets cut off
+ Default: 0%
+--background-move-vertical: 0%;
+
+ This is the discord icon that leads to the friends list.
+--discord-icon: url('https://discord.com/assets/3145bdb4ad97e9e47055.webp');
+
+ controls roundness of borders
+ going above a certain value will make the boxes so round that content may get cut off
+ Default: 15px
+--default-border-radius: 15px;
+
+ distance between the boxes (gets applied all 4 sides of the box, so the distance is actually this amount times two)
+ Default: 2px;
+--default-box-margins: 2px;
+
+ Control the color of buttons and similar things
+ The following colors are in the RGBA format, the numbers represent red, green, blue (0-255 respectively), and alpha (0.0 - 1.0)
+--primary-box-color: rgba(0, 20, 30, 0.8);
+--secondary-box-color: rgba(20, 20, 20, 0.2);
+
+--hovered-button-color: rgba(30, 30, 30, .6);
+--primary-button-color: rgba(20, 20, 20, .6);
+--secondary-button-color: rgba(70, 70, 70, 1.0);
+
+ Accent colors:
+  --accent-one: rgba(0, 147, 250, 1);
+  --accent-one-darker: rgba(0, 100, 200, 1);
+  */
