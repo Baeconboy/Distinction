@@ -159,6 +159,7 @@
 	border-radius: var(--default-border-radius) !important;
 	margin: var(--default-box-margins) !important;
 }
+
 /*Secondary Boxes*/
 .containerDefault_f6f816, /*server channel*/
 .member_a31c43, /*server member*/
@@ -178,7 +179,9 @@
 }
 
 /*buttons*/
-.button_dd4f85, /*profile edit buttons*/
+.wrapper_b6e2f9 > *, /*call controls*/
+.button_ef319f, /*message action buttons*/
+.button_dd4f85:not(.staticButton_ef18ee), /*profile edit buttons*/
 .reaction_ec6b19, /*reactions*/
 .button_faf5ab, /*follow channel button*/
 .button_c02a8d, /*unread every message notice buttons*/
@@ -207,6 +210,8 @@
 }
 
 /*hovered buttons*/
+.wrapper_b6e2f9 > *:hover, /*call controls*/
+.button_ef319f, /*message action buttons*/
 .button_dd4f85:hover, /*profile edit buttons*/
 .reaction_ec6b19:hover, /*reactions*/
 .button_faf5ab:hover, /*follow channel button*/
@@ -223,6 +228,9 @@
 }
 
 /*selected buttons*/
+.wrapper_b6e2f9 > *:active, /*call controls*/
+.button_ef319f.selected_ef319f, /*message action buttons*/
+.button_ef319f:active, /*message action buttons*/
 .button_dd4f85:active, /*profile edit buttons*/
 .reaction_ec6b19.reactionMe_ec6b19, /*reactions*/
 .button_faf5ab:active, /*follow channel button*/
@@ -496,6 +504,23 @@
 	width:40px;
 }
 
+.wrapper_ef319f /*message action buttons*/
+{
+	background-color:transparent;
+	box-shadow: none !important;
+}
+
+.staticButton_ef18ee /*call controls*/
+{
+	border-radius: 0px !important;
+	background-color: transparent !important;
+}
+
+.controlButton_b6e2f9 /*call controls*/
+{
+	margin:0px;
+}
+
 /*
 
  Theme variables:
@@ -540,3 +565,4 @@
   --accent-one: rgba(0, 147, 250, 1);
   --accent-one-darker: rgba(0, 100, 200, 1);
   */
+
