@@ -180,17 +180,17 @@
 
 /*buttons*/
 .wrapper_b6e2f9 > *, /*call controls*/
-.button_ef319f, /*message action buttons*/
+.button_f7e168, /*message action buttons*/
 .button_dd4f85:not(.staticButton_ef18ee), /*profile edit buttons*/
 .reaction_ec6b19, /*reactions*/
 .button_faf5ab, /*follow channel button*/
 .button_c02a8d, /*unread every message notice buttons*/
 .item_a0, /*settings item*/
 .closeButton_df5532, /*settings close button*/
-.button_f67531:not(.disabledButtonWrapper_dd4f85), /*audio control buttons*/
+.button_adca65:not(.disabledButtonWrapper_dd4f85), /*audio control buttons*/
 .button_adcaac:not(.disabledButtonWrapper_dd4f85), /*call control buttons*/
 .iconWrapper_fc4f04:not(.privateChannelRecipientsInviteButtonIcon_c47fa9), /*top bar buttons*/
-.outer_c0f6a6, /*friends menu entries*/
+.outer_ac5d22, /*friends menu entries*/
 .channel_c91bad /*dm entry*/
 {
 	appearance: auto;
@@ -211,17 +211,17 @@
 
 /*hovered buttons*/
 .wrapper_b6e2f9 > *:hover, /*call controls*/
-.button_ef319f, /*message action buttons*/
+.button_f7e168, /*message action buttons*/
 .button_dd4f85:hover, /*profile edit buttons*/
 .reaction_ec6b19:hover, /*reactions*/
 .button_faf5ab:hover, /*follow channel button*/
 .button_c02a8d:hover, /*unread every message notice buttons*/
 .item_a0:hover, /*settings item*/
 .closeButton_df5532:hover, /*settings close button*/
-.button_f67531:not(.disabledButtonWrapper_dd4f85):hover, /*audio control buttons*/
+.button_adca65:not(.disabledButtonWrapper_dd4f85):hover, /*audio control buttons*/
 .button_adcaac:not(.disabledButtonWrapper_dd4f85):hover, /*call control buttons*/
 .iconWrapper_fc4f04:not(.privateChannelRecipientsInviteButtonIcon_c47fa9):hover, /*top bar buttons*/
-.outer_c0f6a6:hover, /*friends menu entries*/
+.outer_ac5d22:hover, /*friends menu entries*/
 .channel_c91bad:hover /*dm entry*/
 {
 	background-color: var(--hovered-button-color) !important;
@@ -229,15 +229,15 @@
 
 /*selected buttons*/
 .wrapper_b6e2f9 > *:active, /*call controls*/
-.button_ef319f.selected_ef319f, /*message action buttons*/
-.button_ef319f:active, /*message action buttons*/
+.button_f7e168.selected_f7e168, /*message action buttons*/
+.button_f7e168:active, /*message action buttons*/
 .button_dd4f85:active, /*profile edit buttons*/
 .reaction_ec6b19.reactionMe_ec6b19, /*reactions*/
 .button_faf5ab:active, /*follow channel button*/
 .button_c02a8d:active, /*unread every message notice buttons*/
 .item_a0[aria-selected="true"], .item_a0:active, /*settings item*/
 .closeButton_df5532:active, /*settings close button*/
-.button_f67531:active, .button_f67531[aria-checked="true"], /*audio control buttons*/
+.button_adca65:active, .button_adca65[aria-checked="true"], /*audio control buttons*/
 .button_adcaac:active, .buttonActive_adcaac, /*call control buttons*/
 .iconWrapper_fc4f04:active, /*top bar buttons*/
 .listItemContents_e05dae:active /*friends menu entries*/
@@ -504,7 +504,7 @@
 	width:40px;
 }
 
-.wrapper_ef319f /*message action buttons*/
+.wrapper_f7e168 /*message action buttons*/
 {
 	background-color:transparent;
 	box-shadow: none !important;
