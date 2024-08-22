@@ -96,7 +96,7 @@
 .item_a0[data-tab-id="Billing"],
 .button_dd4f85[aria-label="Send a gift"]
 {
-	display:none;
+	display:none !important;
 }
 
 /*Invisible Background*/
