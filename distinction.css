@@ -86,6 +86,7 @@
 .children_fc4f04:after,
 .content_a7d72e:before,
 .tabBody_c2739c:before,
+.headerContainer_e5a9ed, /*recent apps*/
 .channel_c91bad:has(.link_c91bad[href="/library"]),
 .channel_c91bad:has(.link_c91bad[href="/store"]),
 .channel_c91bad:has(.link_c91bad[href="/shop"]),
