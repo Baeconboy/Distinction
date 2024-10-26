@@ -81,6 +81,7 @@
 }
 
 /*make things invisible*/
+.gradient_aa1bff,
 .slider_cebd1c,
 .form_a7d72e:before,
 .children_fc4f04:after,
@@ -101,6 +102,7 @@
 }
 
 /*Invisible Background*/
+.guilds_a4d4d9, /*server list*/
 .themedBackground_bdf0de, /*chat box background*/
 .container_c2739c, /*friends menu*/
 .pageBody_c2efea, /*channels & roles -> browse channels*/
@@ -134,6 +136,8 @@
 }
 
 /*Boxes*/
+.scroller_fea3ef, /*server list*/
+.footer_aa1bff, /*discovery button*/
 .nowPlayingColumn_c2739c, /*friends "now playing"*/
 .peopleColumn_c2739c, /*friends menu*/
 .container_f1fd9c, /*channels & roles window*/
@@ -145,7 +149,6 @@
 .contentRegion_c25c6d, /*settings content*/
 .userPanelOuter_c69a7b,
 .userProfileOuter_c69a7b:before,
-.guilds_a4d4d9, /*server list*/
 .privateChannels_f0963d, /*DMs list*/
 .panels_a4d4d9, /*Profile bar left of chat*/
 .chat_a7d72e > .subtitleContainer_a7d72e, /*bar above chat*/
@@ -538,6 +541,10 @@
 	z-index: 999;
 }
 
+.footer_aa1bff /*discovery button*/
+{
+	width: auto !important;
+}
 /*
 
  Theme variables:
@@ -582,3 +589,4 @@
   --accent-one: rgba(0, 147, 250, 1);
   --accent-one-darker: rgba(0, 100, 200, 1);
   */
+
