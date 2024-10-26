@@ -136,6 +136,9 @@
 }
 
 /*Boxes*/
+.backdrop_accde0, /*discovery top bar*/
+.container_e462a4, /*discovery tab list*/
+.scroller_b91a2d, /*discovery list*/
 .scroller_fea3ef, /*server list*/
 .footer_aa1bff, /*discovery button*/
 .nowPlayingColumn_c2739c, /*friends "now playing"*/
@@ -545,6 +548,14 @@
 {
 	width: auto !important;
 }
+
+.backdrop_accde0 /*discovery top bar*/
+{
+	border-radius: ;
+	background-color:rgba(0,0,0,0.1) !important;
+	backdrop-filter: blur(var(--background-blur));
+}
+
 /*
 
  Theme variables:
