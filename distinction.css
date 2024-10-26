@@ -100,6 +100,7 @@
 }
 
 /*Invisible Background*/
+.themedBackground_bdf0de, /*chat box background*/
 .container_c2739c, /*friends menu*/
 .pageBody_c2efea, /*channels & roles -> browse channels*/
 .wrapper_faf5ab, /*follow this channel box*/
@@ -114,7 +115,7 @@
 .userPanelInner_c69a7b,
 .sidebar_a4d4d9, .scroller_c47fa9, /*DMs list*/
 .container_b2ca13, .container_adcaac, /*Profile bar left of chat*/
-.root_bc9cc2,
+.root_b9fccc,
 .userProfileOuter_c69a7b,
 .userProfileInner_c69a7b,
 .chat_a7d72e, /*Entire chat box + top bar*/
@@ -530,6 +531,10 @@
 
 #app-mount > div.appAsidePanelWrapper_bd26cc > div.notAppAsidePanel_bd26cc > div.app_bd26cc > div > div.layers_d4b6c5.layers_a01fb1 > div > div > div > div > div.chat_a7d72e > div.content_a7d72e > main > form > div > div.channelAppLauncher_df39bd > div > button {
 	height:37px;
+}
+
+.body_b9fccc{
+	z-index: 999;
 }
 
 /*
